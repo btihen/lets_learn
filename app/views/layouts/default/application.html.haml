@@ -62,7 +62,7 @@
     .container
       = render 'default/shared/navigation'
       = yield
-    
+
     / Footer
     / https://mdbootstrap.com/components/bootstrap-footer/
     %footer.page-footer.font-small.pt-4.mt-4.bg-light
@@ -72,7 +72,7 @@
           %li.list-inline-item
             %h5.mb-1 Join Us and Contribute Data
           %li.list-inline-item
-            %a.btn.btn-success.btn-rounded(href="#!") Contact us!
+            %a.btn.btn-success.btn-rounded(href="mailto:jharlin@las.ch,dpatton@las.ch") Contact us!
       / /.Call to action
       %hr/
       / Footer Links
@@ -81,7 +81,7 @@
           / First column
           .col-md-1
           .col-md-8
-            %h4.text-uppercase LETS Analyze
+            %h4.text-uppercase LETS Learn
             %p
               %strong LETS Learn
               supports the
@@ -96,11 +96,11 @@
             %h5.text-uppercase Links
             %ul.list-unstyled
               %li
-                %a(href="http://lets-study.ch/") LETS Study
-              %li
                 %a(href="/data") LETS Data
               %li
                 %a(href="/learn") LETS Learn
+              %li
+                %a(href="http://lets-study.ch/") LETS Study
           / /.Second column
           .col-md-1
       / /.Footer Links
