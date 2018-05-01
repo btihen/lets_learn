@@ -20,6 +20,9 @@ gem 'uglifier', '>= 1.3.0'
 
 gem 'bootstrap', '~> 4.1'
 gem 'deface'
+gem 'spina'
+# https://github.com/SpinaCMS/Spina
+# rails g spina:install
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
