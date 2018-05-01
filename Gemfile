@@ -18,9 +18,16 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# bootstrap styling
 gem 'bootstrap', '~> 4.1'
+gem 'jquery-rails'
+
+# for engine view overrides
 gem 'deface'
+
+# the learn cms
 gem 'spina'
+gem 'spina-template'
 # https://github.com/SpinaCMS/Spina
 # rails g spina:install
 
