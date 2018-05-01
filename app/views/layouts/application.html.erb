@@ -7,8 +7,134 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+
+    <!-- Static navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <!-- <a class="navbar-brand" href="/lets">LETS</a> -->
+      <%= link_to 'LETS Learn', lets.root_path, class: 'navbar-brand' %>
+      <button class="navbar-toggler" type="button" data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+              LETS Learn
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/design_study">Transect Design</a>
+              <a class="dropdown-item" href="/collect_data">Data Collection</a>
+              <a class="dropdown-item" href="/analyze_data">Data Analysis</a>
+              <a class="dropdown-item" href="/graph_data">Visual Analysis</a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+              Core Data
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="nav-link active" href="http://lets-study.ch/">
+                Transects
+              </a>
+              <a class="nav-link active" href="http://lets-study.ch/">
+                Plots
+              </a>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="http://lets-study.ch/">
+              Login
+            </a>
+          </li>
+        </ul>
+        <!--
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form> -->
+      </div>
+    </nav> <!-- Static Nav bar -->
+
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <!--Footer-->
+    <footer class="page-footer font-small bg-light pt-4 mt-4">
+
+      <!--Call to action-->
+      <div class="text-center py-3">
+        <ul class="list-unstyled list-inline mb-0">
+          <li class="list-inline-item">
+            <h4 class="mb-1">Join Us and Contribute Data</h4>
+          </li>
+          <li class="list-inline-item">
+            <a href="mailto:jharlin@las.ch,dpatton@las.ch" class="btn btn-success btn-rounded">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <!--/.Call to action-->
+
+      <!--Footer Links-->
+      <div class="container text-center text-md-left">
+        <div class="row">
+          <!--First column-->
+          <div class="col-md-10">
+            <h5 class="text-uppercase">LETS Learn</h5>
+            <p>
+              <strong>LETS Learn</strong> supports the
+              <a href="http://lets-study.ch/">LETS Study Project</a>
+              <strong>
+                <em>(Local Environmental Transect Survey)</em>
+              </strong>
+              by organizing and sharing the data for others
+              to use and by providing learning materials for
+              others to learn, participate and interpret
+              Enviornmental Data.
+            </p>
+          </div>
+          <!--Second column-->
+          <div class="col-md-2">
+            <h5 class="text-uppercase">Links</h5>
+            <ul class="list-unstyled">
+                <li>
+                  <a href="/data">LETS Data</a>
+                </li>
+                <li>
+                  <a href="/learn">LETS Learn</a>
+                </li>
+                <li>
+                  <a href="http://lets-study.ch/">LETS Study</a>
+                </li>
+            </ul>
+          </div>
+          <!--/.Second column-->
+        </div>
+      </div>
+      <!--/.Footer Links-->
+
+      <!--Copyright-->
+      <div class="footer-copyright py-1 text-center">
+          © 2018 Copyright:
+          <a href="http://lets-study.ch/"> LETS Study </a>
+      </div>
+      <!--/.Copyright-->
+
+    </footer>
+    <!--/.Footer-->
+
   </body>
 </html>
