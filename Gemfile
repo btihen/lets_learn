@@ -20,17 +20,18 @@ gem 'uglifier', '>= 1.3.0'
 
 # bootstrap styling
 gem 'bootstrap', '~> 4.1'
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 4.3'
 
 # for engine view overrides
-gem 'deface'
+gem 'deface', '~> 1.3'
 
+# ENGINES
+gem 'lets', path: 'lets'
 # the cms for the learning materials
-gem 'spina'
+gem 'spina', '~> 0.12'
 # https://github.com/SpinaCMS/Spina
 # rails g spina:install
-# templates uses burbon 5 (seems to have a problem)
-# gem 'spina-template'
+# gem 'spina-template'  # spina-templates uses burbon 5 - has problem
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -52,14 +53,14 @@ group :development, :test do
 
   gem 'faker', '~> 1.8'
   gem 'rspec-rails', '~> 3.7'
-  gem 'factory_bot_rails'
+  gem 'factory_bot_rails', '~> 4.8'
   # gem 'shoulda-matchers', '~> 3.1'
   # need a feature from the master branch. .optional
   # gem 'shoulda-matchers', git: "https://github.com/thoughtbot/shoulda-matchers"
 
   #use pry instead of irb
-  gem 'pry-rails'
-  gem 'modular_engine'
+  gem 'pry-rails', '~> 0.3'
+  gem 'modular_engine', '~> 0.9'
 
 end
 
@@ -74,4 +75,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'lets', path: 'lets'
