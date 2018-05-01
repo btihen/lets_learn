@@ -25,11 +25,12 @@ gem 'jquery-rails'
 # for engine view overrides
 gem 'deface'
 
-# the learn cms
+# the cms for the learning materials
 gem 'spina'
-gem 'spina-template'
 # https://github.com/SpinaCMS/Spina
 # rails g spina:install
+# templates uses burbon 5 (seems to have a problem)
+# gem 'spina-template'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
