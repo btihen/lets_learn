@@ -1,0 +1,7 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Data Dashboard</h1>
+
+<p>
+  A form to select data of interest goes here
+</p>
