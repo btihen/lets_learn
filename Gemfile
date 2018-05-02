@@ -25,6 +25,17 @@ gem 'jquery-rails', '~> 4.3'
 # for engine view overrides
 gem 'deface', '~> 1.3'
 
+# gem 'haml', '~> 5.0'
+gem 'haml-rails', '~> 1.0'
+# Converting Rails application layout file to haml format
+# Once Haml-rails is installed on the Rails application, you can convert the erb layout file, app/views/layouts/application.html.erb to app/views/layouts/application.html.haml using this command:
+# $ rails generate haml:application_layout convert
+# After the application layout file is converted successfully, make sure to delete app/views/layouts/application.html.erb, so Rails can start using app/views/layouts/application.html.haml instead.
+# Converting all .erb views to haml format
+# If you want to convert all of your .erb views into .haml, you can do so using the following command:
+# $ rake haml:erb2haml
+# If you already have .haml files for one or more of the .erb files, the rake task will give you the option of either replacing these .haml files or leaving them in place.
+
 # ENGINES
 gem 'lets', path: 'lets'
 # the cms for the learning materials

@@ -1,0 +1,100 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Lets
+    = stylesheet_link_tag    "lets/application", media: "all"
+    = javascript_include_tag "lets/application"
+    = csrf_meta_tags
+  %body
+    / Static navbar
+    / = render :partial => "navbar"
+    / Static navbar
+    %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+      / <a class="navbar-brand" href="/lets">LETS</a>
+      = link_to 'LETS Learn', lets.root_path, class: 'navbar-brand'
+      %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+        %span.navbar-toggler-icon
+      #navbarSupportedContent.collapse.navbar-collapse
+        %ul.navbar-nav.mr-auto
+          %li.nav-item.dropdown
+            %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+              LETS Learn
+            .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+              %a.dropdown-item{:href => "/design_study"} Transect Design
+              %a.dropdown-item{:href => "/collect_data"} Data Collection
+              %a.dropdown-item{:href => "/analyze_data"} Data Analysis
+              %a.dropdown-item{:href => "/graph_data"} Visual Analysis
+              .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+              %li.nav-item.dropdown
+                %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                  Core Data
+                .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+                  %a.nav-link.active{:href => "http://lets-study.ch/"}
+                    Transects
+                  %a.nav-link.active{:href => "http://lets-study.ch/"}
+                    Plots
+              %ul.navbar-nav.ml-auto
+                %li.nav-item
+                  %a.nav-link.active{:href => "http://lets-study.ch/"}
+                    Login
+              /
+                <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+    / Static Nav bar
+
+    .container
+      = yield
+
+    / Footer
+    / = render :partial => "footer"
+    / Footer
+    %footer.page-footer.font-small.bg-light.pt-4.mt-4
+      / Call to action
+      .text-center.py-3
+        %ul.list-unstyled.list-inline.mb-0
+          %li.list-inline-item
+            %h4.mb-1 Join Us and Contribute Data
+          %li.list-inline-item
+            %a.btn.btn-success.btn-rounded{:href => "mailto:jharlin@las.ch,dpatton@las.ch"} Contact Us
+      / /.Call to action
+      / Footer Links
+      .container.text-center.text-md-left
+        .row
+          / First column
+          .col-md-10
+            %h5.text-uppercase LETS Learn
+            %p
+              %strong LETS Learn
+              supports the
+              %a{:href => "http://lets-study.ch/"} LETS Study Project
+              %strong
+                %em (Local Environmental Transect Survey)
+              by organizing and sharing the data for others
+              to use and by providing learning materials for
+              others to learn, participate and interpret
+              Enviornmental Data.
+          / Second column
+          .col-md-2
+            %h5.text-uppercase Links
+            %ul.list-unstyled
+              %li
+                %a{:href => "/data"} LETS Data
+              %li
+                %a{:href => "/learn"} LETS Learn
+              %li
+                %a{:href => "http://lets-study.ch/"} LETS Study
+          / /.Second column
+      / /.Footer Links
+      / Copyright
+      .footer-copyright.py-1.text-center
+        \&amp;copy 2018 Copyright
+        %strong
+          %a{:href => "https://container4.ch/"} Container4
+        in support of the
+        %strong
+          %a{:href => "http://lets-study.ch/"} LETS Study
+      / /.Copyright
+    / /.Footer
