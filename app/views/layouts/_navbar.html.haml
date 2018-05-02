@@ -1,35 +1,35 @@
-    / Static navbar
-    %nav.navbar.navbar-expand-lg.navbar-light.bg-light
-      / <a class="navbar-brand" href="/lets">LETS</a>
-      = link_to 'LETS Learn', lets.root_path, class: 'navbar-brand'
-      %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
-        %span.navbar-toggler-icon
-      #navbarSupportedContent.collapse.navbar-collapse
-        %ul.navbar-nav.mr-auto
+/ Static navbar
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  / <a class="navbar-brand" href="/lets">LETS</a>
+  = link_to 'LETS Learn', lets.root_path, class: 'navbar-brand'
+  %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    %ul.navbar-nav.mr-auto
+      %li.nav-item.dropdown
+        %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+          LETS Learn
+        .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
+          %a.dropdown-item{:href => "/design_study"} Transect Design
+          %a.dropdown-item{:href => "/collect_data"} Data Collection
+          %a.dropdown-item{:href => "/analyze_data"} Data Analysis
+          %a.dropdown-item{:href => "/graph_data"} Visual Analysis
+          .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
           %li.nav-item.dropdown
             %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-              LETS Learn
+              Core Data
             .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-              %a.dropdown-item{:href => "/design_study"} Transect Design
-              %a.dropdown-item{:href => "/collect_data"} Data Collection
-              %a.dropdown-item{:href => "/analyze_data"} Data Analysis
-              %a.dropdown-item{:href => "/graph_data"} Visual Analysis
-              .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-              %li.nav-item.dropdown
-                %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-                  Core Data
-                .dropdown-menu{"aria-labelledby" => "navbarDropdown"}
-                  %a.nav-link.active{:href => "http://lets-study.ch/"}
-                    Transects
-                  %a.nav-link.active{:href => "http://lets-study.ch/"}
-                    Plots
-              %ul.navbar-nav.ml-auto
-                %li.nav-item
-                  %a.nav-link.active{:href => "http://lets-study.ch/"}
-                    Login
-              /
-                <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-    / Static Nav bar
+              %a.nav-link.active{:href => "http://lets-study.ch/"}
+                Transects
+              %a.nav-link.active{:href => "http://lets-study.ch/"}
+                Plots
+          %ul.navbar-nav.ml-auto
+            %li.nav-item
+              %a.nav-link.active{:href => "http://lets-study.ch/"}
+                Login
+          /
+            <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+/ Static Nav bar
