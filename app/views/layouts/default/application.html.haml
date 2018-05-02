@@ -7,109 +7,13 @@
     = csrf_meta_tags
   %body
     / Static navbar
-    / https://awsm-tools.com/code/html2haml
-    %nav.navbar.navbar-expand-lg.navbar-light.bg-light
-      %a.navbar-brand(href="/home") LETS Learn
-      %button.navbar-toggler(aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarSupportedContent" data-toggle="collapse" type="button")
-        %span.navbar-toggler-icon
-      #navbarSupportedContent.collapse.navbar-collapse
-        %ul.navbar-nav.mr-auto
-          %li.nav-item.dropdown
-            %a#navbarDropdown.nav-link.dropdown-toggle(aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button")
-              Transects Intro
-            .dropdown-menu(aria-labelledby="navbarDropdown")
-              %a.dropdown-item(href="/design_study") Transect Design
-              %a.dropdown-item(href="/collect_data") Data Collection
-              %a.dropdown-item(href="/analyze_data") Data Analysis
-              %a.dropdown-item(href="/graph_data") Visual Analysis
-          %li.nav-item.dropdown
-            %a#navbarDropdown.nav-link.dropdown-toggle(aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button")
-              Processed Data
-            .dropdown-menu(aria-labelledby="navbarDropdown")
-              %a.dropdown-item(href="/species_count_date")
-                Species Count each Measurement Date
-              %a.dropdown-item(href="/species_avg_by_date")
-                Species Count Average by Date
-              %a.dropdown-item(href="/species_avg_by_year")
-                Species Count Average by Year
-              %a.dropdown-item(href="/species_avg_by_decade")
-                Species Count Average by Decade
-              %a.dropdown-item.disabled(href="/species_longitudinal")
-                Distribution by Elevation (over Time)
-              %a.dropdown-item.disabled(href="/species_animated")
-                Animated Distribution by Elevation
-              .dropdown-divider
-              %a.dropdown-item.disabled(href="/growth_elevation")
-                Growth Rate by Elevation
-              %a.dropdown-item.disabled(href="/growth_longitudinal")
-                Longitudinal Growth Rate
-              %a.dropdown-item.disabled(href="/growth_animated")
-                Growth Rates by Elevation (Animated over Time)
-          %li.nav-item.dropdown
-            %a#navbarDropdown.nav-link.dropdown-toggle(aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button")
-              Raw Data
-            .dropdown-menu(aria-labelledby="navbarDropdown")
-              = link_to "Species", "#", class: "dropdown-item"
-              .dropdown-divider
-              = link_to "Transects","#", class: "dropdown-item"
-              = link_to "Tree Plots", "#", class: "dropdown-item"
-              .dropdown-divider
-              = link_to 'Tree Observations', "#", class: "dropdown-item"                                              |
-        %ul.navbar-nav.ml-auto
-          %li.nav-item
-            = link_to 'Login', "/learn/admin", class: "nav-link"
+    = render :partial => "layouts/navbar"
+    / = render :partial => "layouts/default/navbar"
 
     .container
       = render 'default/shared/navigation'
       = yield
 
     / Footer
-    / https://mdbootstrap.com/components/bootstrap-footer/
-    %footer.page-footer.font-small.pt-4.mt-4.bg-light
-      / Call to action
-      .text-center.py-1
-        %ul.list-unstyled.list-inline.mb-0
-          %li.list-inline-item
-            %h5.mb-1 Join Us and Contribute Data
-          %li.list-inline-item
-            %a.btn.btn-success.btn-rounded(href="mailto:jharlin@las.ch,dpatton@las.ch") Contact us!
-      / /.Call to action
-      %hr/
-      / Footer Links
-      .container-fluid.text-center.text-md-left
-        .row
-          / First column
-          .col-md-1
-          .col-md-8
-            %h5.text-uppercase LETS Learn
-            %p
-              %strong LETS Learn
-              supports the
-              %a(href="http://lets-study.ch/") LETS Study Project
-              %strong
-                %em (Local Environmental Transect Survey)
-              by organizing and sharing the data for others
-              to use and by providing learning materials for
-              others to learn, participate and interpret
-              Enviornmental Data.
-          / /.First column
-          / Second column
-          .col-md-2
-            %h5.text-uppercase Links
-            %ul.list-unstyled
-              %li
-                %a(href="/data") LETS Data
-              %li
-                %a(href="/learn") LETS Learn
-              %li
-                %a(href="http://lets-study.ch/") LETS Study
-          / /.Second column
-          .col-md-1
-      / /.Footer Links
-      .container-fluid.text-center
-        &copy 2018 Copyright
-        %strong
-          %a(href="https://container4.ch") Contaner4
-        in support of the
-        %strong
-          %a(href="http://lets-study.ch/") LETS Study
+    = render :partial => "layouts/footer"
+    / = render :partial => "layouts/default/footer"

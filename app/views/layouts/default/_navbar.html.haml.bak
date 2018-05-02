@@ -1,13 +1,10 @@
-/ Static navbar
 / https://awsm-tools.com/code/html2haml
 %nav.navbar.navbar-expand-lg.navbar-light.bg-light
   %a.navbar-brand(href="/home") LETS Learn
   %button.navbar-toggler(aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarSupportedContent" data-toggle="collapse" type="button")
     %span.navbar-toggler-icon
   #navbarSupportedContent.collapse.navbar-collapse
-
     %ul.navbar-nav.mr-auto
-
       %li.nav-item.dropdown
         %a#navbarDropdown.nav-link.dropdown-toggle(aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button")
           Transects Intro
@@ -16,7 +13,6 @@
           %a.dropdown-item(href="/collect_data") Data Collection
           %a.dropdown-item(href="/analyze_data") Data Analysis
           %a.dropdown-item(href="/graph_data") Visual Analysis
-
       %li.nav-item.dropdown
         %a#navbarDropdown.nav-link.dropdown-toggle(aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button")
           Processed Data
@@ -40,7 +36,6 @@
             Longitudinal Growth Rate
           %a.dropdown-item.disabled(href="/growth_animated")
             Growth Rates by Elevation (Animated over Time)
-
       %li.nav-item.dropdown
         %a#navbarDropdown.nav-link.dropdown-toggle(aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button")
           Raw Data
@@ -51,9 +46,6 @@
           = link_to "Tree Plots", "#", class: "dropdown-item"
           .dropdown-divider
           = link_to 'Tree Observations', "#", class: "dropdown-item"                                              |
-
-    / left login & username
     %ul.navbar-nav.ml-auto
       %li.nav-item
         = link_to 'Login', "/learn/admin", class: "nav-link"
-/ Static Nav bar
