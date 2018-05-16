@@ -1,51 +1,67 @@
-/ https://awsm-tools.com/code/html2haml
-%nav.navbar.navbar-expand-lg.navbar-light.bg-light
-  %a.navbar-brand(href="/home") LETS Learn
-  %button.navbar-toggler(aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarSupportedContent" data-toggle="collapse" type="button")
-    %span.navbar-toggler-icon
-  #navbarSupportedContent.collapse.navbar-collapse
-    %ul.navbar-nav.mr-auto
-      %li.nav-item.dropdown
-        %a#navbarDropdown.nav-link.dropdown-toggle(aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button")
-          Transects Intro
-        .dropdown-menu(aria-labelledby="navbarDropdown")
-          %a.dropdown-item(href="/design_study") Transect Design
-          %a.dropdown-item(href="/collect_data") Data Collection
-          %a.dropdown-item(href="/analyze_data") Data Analysis
-          %a.dropdown-item(href="/graph_data") Visual Analysis
-      %li.nav-item.dropdown
-        %a#navbarDropdown.nav-link.dropdown-toggle(aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button")
-          Processed Data
-        .dropdown-menu(aria-labelledby="navbarDropdown")
-          %a.dropdown-item(href="/species_count_date")
-            Species Count each Measurement Date
-          %a.dropdown-item(href="/species_avg_by_date")
-            Species Count Average by Date
-          %a.dropdown-item(href="/species_avg_by_year")
-            Species Count Average by Year
-          %a.dropdown-item(href="/species_avg_by_decade")
-            Species Count Average by Decade
-          %a.dropdown-item.disabled(href="/species_longitudinal")
-            Distribution by Elevation (over Time)
-          %a.dropdown-item.disabled(href="/species_animated")
-            Animated Distribution by Elevation
-          .dropdown-divider
-          %a.dropdown-item.disabled(href="/growth_elevation")
-            Growth Rate by Elevation
-          %a.dropdown-item.disabled(href="/growth_longitudinal")
-            Longitudinal Growth Rate
-          %a.dropdown-item.disabled(href="/growth_animated")
-            Growth Rates by Elevation (Animated over Time)
-      %li.nav-item.dropdown
-        %a#navbarDropdown.nav-link.dropdown-toggle(aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button")
-          Raw Data
-        .dropdown-menu(aria-labelledby="navbarDropdown")
-          = link_to "Species", "#", class: "dropdown-item"
-          .dropdown-divider
-          = link_to "Transects","#", class: "dropdown-item"
-          = link_to "Tree Plots", "#", class: "dropdown-item"
-          .dropdown-divider
-          = link_to 'Tree Observations', "#", class: "dropdown-item"                                              |
-    %ul.navbar-nav.ml-auto
-      %li.nav-item
-        = link_to 'Login', "/learn/admin", class: "nav-link"
+/ Static navbar
+  / https://awsm-tools.com/code/html2haml
+  %nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    %a.navbar-brand(href="/home") LETS Learn
+    %button.navbar-toggler(aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" data-target="#navbarSupportedContent" data-toggle="collapse" type="button")
+      %span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+
+      %ul.navbar-nav.mr-auto
+
+        %li.nav-item.dropdown
+          %a#navbarDropdown.nav-link.dropdown-toggle(aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button")
+            Transects Intro
+          .dropdown-menu(aria-labelledby="navbarDropdown")
+            %a.dropdown-item(href="/design_study") Transect Design
+            %a.dropdown-item(href="/collect_data") Data Collection
+            %a.dropdown-item(href="/analyze_data") Data Analysis
+            %a.dropdown-item(href="/graph_data") Visual Analysis
+
+        %li.nav-item.dropdown
+          %a#navbarDropdown.nav-link.dropdown-toggle(aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button")
+            Processed Data
+          .dropdown-menu(aria-labelledby="navbarDropdown")
+            %a.dropdown-item(href="/species_count_date")
+              Species Count each Measurement Date
+            %a.dropdown-item(href="/species_avg_by_date")
+              Species Count Average by Date
+            %a.dropdown-item(href="/species_avg_by_year")
+              Species Count Average by Year
+            %a.dropdown-item(href="/species_avg_by_decade")
+              Species Count Average by Decade
+            %a.dropdown-item.disabled(href="/species_longitudinal")
+              Distribution by Elevation (over Time)
+            %a.dropdown-item.disabled(href="/species_animated")
+              Animated Distribution by Elevation
+            .dropdown-divider
+            %a.dropdown-item.disabled(href="/growth_elevation")
+              Growth Rate by Elevation
+            %a.dropdown-item.disabled(href="/growth_longitudinal")
+              Longitudinal Growth Rate
+            %a.dropdown-item.disabled(href="/growth_animated")
+              Growth Rates by Elevation (Animated over Time)
+
+        %li.nav-item.dropdown
+          %a#navbarDropdown.nav-link.dropdown-toggle(aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button")
+            Raw Data
+          .dropdown-menu(aria-labelledby="navbarDropdown")
+            = link_to "Species", "#", class: "dropdown-item"
+            .dropdown-divider
+            = link_to "Transects","#", class: "dropdown-item"
+            = link_to "Tree Plots", "#", class: "dropdown-item"
+            .dropdown-divider
+            = link_to 'Tree Observations', "#", class: "dropdown-item"
+
+      / left login & username
+      %ul.navbar-nav.ml-auto
+        %li.nav-item.dropdown
+          %a#navbarDropdown.nav-link.dropdown-toggle(aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" href="#" role="button")
+            Login
+          .dropdown-menu(aria-labelledby="navbarDropdown")
+            = link_to 'Data Login',  "/data/admin",  class: "nav-link"
+            .dropdown-divider
+    /
+      %ul.navbar-nav.ml-auto
+        %li.nav-item
+          = link_to 'Login', "/data/admin", class: "nav-link"
+  / Static Nav bar
