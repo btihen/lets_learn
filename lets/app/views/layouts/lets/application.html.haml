@@ -8,8 +8,10 @@
     = csrf_meta_tags
   %body
 
-    = render :partial => "navbar"
-    / = render :partial => "/layouts/navbar"
+    / use central rails navbar
+    = render :partial => "layouts/navbar"
+    / use local engine navbar (if no central footer)
+    / = render :partial => "layouts/lets/navbar"
 
     .container
       - flash.each do |key, value|
@@ -18,4 +20,7 @@
 
       = yield
 
+    / use central rails footer
     = render :partial => "layouts/footer"
+    / use local engine footer (if no central footer)
+    / = render :partial => "layouts/lets/footer"
