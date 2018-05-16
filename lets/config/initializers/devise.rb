@@ -11,7 +11,10 @@ Devise.setup do |config|
   # config.secret_key = '9b892672ce0b2c9a9f8f842872e9d14b24e3a1624f171fb7b574469785bc909e6b16adc4007f11c204053cc629b4e16b8f24e59cf40f6be142464787510affe4'
 
   config.router_name = :lets
-  # config.parent_controller = 'Lets::ApplicationController'
+  # recommeded - to allow Devise's controllers to inherit from your engine's controller
+  # instead of main rails controller
+  # # https://github.com/plataformatec/devise/wiki/How-To:-Use-devise-inside-a-mountable-engine
+  config.parent_controller = 'Lets::ApplicationController'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
